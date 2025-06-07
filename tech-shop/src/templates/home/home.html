@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+  <div class="clear bg-opacity-80 max-w-4xl mx-auto mt-12 p-8">
+    <div class="flex flex-col md:flex-row items-center gap-8">
+      <div class="flex-1">
+        <h1 class="text-4xl font-bold text-blue-700 mb-4">Welcome to Tech-Shop</h1>
+        <p class="text-gray-700 mb-6">
+          Discover the latest laptops and tech gadgets at unbeatable prices. We offer a wide range of products to suit your needs, whether you're a student, professional, or tech enthusiast.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <!-- Add call-to-action buttons here if needed -->
+        </div>
+      </div>
+      <div class="flex-1 flex justify-left md:justify-end">
+        <img src="https://media.istockphoto.com/id/1206800961/photo/online-shopping-and-payment-man-using-tablet-with-shopping-cart-icon-digital-marketing.jpg?s=612x612&w=0&k=20&c=qG_9JB9ll4P5to97_HVxzMqhhzF0Gi1nWM_hNeiotbk=" alt="Laptops" class="rounded-lg shadow-lg w-full max-w-xs">
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class=" bg-opacity-90 p-6 text-center">
+      <svg class="mx-auto mb-3 w-10 h-10 text-blue-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9"></path><path d="M12 4v16"></path><path d="M3 20h9"></path></svg>
+      <h3 class="font-semibold text-lg mb-2">Wide Selection</h3>
+      <p class="text-gray-600">Choose from top brands and the latest models in laptops and accessories.</p>
+    </div>
+    <div class=" bg-opacity-90 p-6 circle text-center">
+      <svg class="mx-auto mb-3 w-10 h-10 text-blue-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3"></path><circle cx="12" cy="12" r="10"></circle></svg>
+      <h3 class="font-semibold text-lg mb-2">Fast Delivery</h3>
+      <p class="text-gray-600">Get your tech delivered quickly and securely to your doorstep.</p>
+    </div>
+    <div class=" bg-opacity-90 p-6  text-center">
+      <svg class="mx-auto mb-3 w-10 h-10 text-blue-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9"></path><path d="M12 4v16"></path><path d="M3 20h9"></path></svg>
+      <h3 class="font-semibold text-lg mb-2">Support</h3>
+      <p class="text-gray-600">Our team is here to help you with any questions or technical issues.</p>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto mt-16 mb-12 text-center">
+    <h2 class="text-2xl font-bold mb-4 text-blue-700">Why Shop With Us?</h2>
+    <p class="text-gray-700 mb-6">
+      At Tech-Shop, we are committed to providing quality products, excellent customer service, and a seamless shopping experience. Join thousands of happy customers today!
+    </p>
+    <a href="{% url 'products' %}" class="bg-blue-700 text-white px-8 py-3 rounded hover:bg-blue-800 transition">Shop Now</a>
+  </div>
+</div>
+{% endblock %}

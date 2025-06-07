@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+    <title>Tech-Shop</title>
+    {% endblock head%}
+</head>
+
+   
+<body>
+    
+    
+<nav class="bg-blue-700 top-0 z-50 shadow-lg">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="{% url 'home'%}" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAxgMBIgACEQEDEQH/xAAbAAEBAAMBAQEAAAAAAAAAAAAAAQIDBAYFB//EADwQAAEEAQMBBwIFAgENAQAAAAEAAgMRBAUSITEGEyJBUWFxMoEHFCNCkaHRkhckM0NFUlVicpOxwdMV/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAECAwQF/8QAHxEBAAICAwADAQAAAAAAAAAAAAERAgMSITEUQXEE/9oADAMBAAIRAxEAPwD3yIi0CIiAiIqioiICqiqKIEQIjJVREFVCiAKjJERBQiBERQiiqKIiIKFVEVHKiIsKIiICIiqKiIgKqKoogRUIiqqKhUFlSBVBFUSkBFUpERVERRERBUQKKjmRCrXCwqIiICIioKqKogqoqgBZKBZKgAsgFAFkgBVFUERWkVERVEEREUBERAREVHMqq4VXuLUWFREVQRFVEBVRUKoL43aTtJidno4DkxyyvmJDGRgdB1PJ919leB/FqP8AzTTZvSV7P5bf/pb1xE5RaS6R+JOnn/Z2Z/iZ/dZ/5SNP/wCHZn+Jn91+YMctoK+nr/m05ew5Tnk/VMHtyzUHujwNE1HIc1u5wj2HaPflapPxBisxM0nLjnLtjfzDgxjXXXiPkL68Lw+kapj4mHlYedBNJjzPZJePN3Tw5t1z6cr2h1vtJnse2HTNLyBI1rnYok3yMY4W3eDxyFjZowxmuPX6sZTP29NoepTZz82DKjhbPiSiN7oH743W0O49OtEL6tLwEGVr2FHDi5OAND03f4ptPxWvc00aG2nAX60vX9np8zJ0fGm1FpGQ5p3FzNjnC+HFvkSKNLy7dXHuGsZt9FFaUXBpEVUKKiipUQERFEERRBz+VK81fkhWTRubXRZaYKoRXVPsgiKuBaa4RBFQoqqgvG/itHfZiOWv9HlM59AQR/ZeypfJ7W6O7XtAytOjkbFK/Y5j33tDmuDhfsar7rWM1Nj8Njeuhjl6Rn4adoh1m0v/AL8n/wA19TQ/w3zRnMdrc2KcMcuZjSvLn+gstFD3Xt174ju3OcXlNNbjTZ+PHnSmLGdIBI8dWtXs25OmPx4cc9pM3EeGNDocE98BQ+nvWtBeBz8L1knZDQJccxHScdgqhJG0tf8AO7qvOad2F1LTdaMuNk4z8F1sc573tlDCQeNoFHgcg/8AkhdfkYbO7qmeMwnZ3VNI0/UQ7HzzmTvY6FjWQObLlOc8OBlc40XCqB46le807Lj1DFE8bXt8TmOY/q1zSQ4H4IKS4OJPG5kuLC9rhyCwG1txoIsaBsOPE2OJg8LGCgAvJszxy89dIimxQq+ShXFUKhVUKghUVURRREUBEREc6oFol+ijTpc6J8bBt8Y6u9VzE11S1lw//qRGKnkqq3buG4WisV8XtxiRu7MZ2a2fJiysbFlfEYZ3x7SG2D4SL6ea+3XK1ZePFmY0uLksEkErDHIw9HNPBCDyWuYP5SLRcXG//SnZkZJdLHHqD2yP/SP7y7gWAaulm9k0EWm6bWo6dBn5zmZEk2aZZS0RlwDZNztu4tDeDfWuSvt52FhakxsefhOkZi3JDy5pNAg0QR7j7hZQ6LppwZMM4bTjSP3Pjke5/iB6gk2OnBFJSPl67hN0TRciTAmzS50sBEbsp7v9YOGlx4vp1r+qzk1LPyO0Gnwy4WVprDFkG5pYyxxDRRprj068rpwtF0yHGyGMwNwe1kkm6R8kji07mgueSTRuhdL6skEM00U82NvlibI1pP7bFEe9q0PM6VBJpsuns1iDM77IuD8/DnuliyXuaeXNsEbqJHBr1WeDpsePrus91NnyjBiglgifnTPG4scSCC7myBwV9fC7P6Rh5bJocAtkZXdfqPcyIkH6Glxazix4QOq+hhjHORPlQY5inl2tlebBftsN/gWlDykmMG9jj2ibq+UM/wDK/mxlnJd3ZfV7e7vbt/btr+vK1axlYw1bVptSGtGOOPGI/JzysZA57OQacA3muT919s6HpDcyfJOmtMkZdMGB7zGXg3u7u9m6+b22vouixozkSvxbdleHIvnvNooD0PFj3VoeRy49Smz9Fw9Sj1HMnGkvkniw8/uHGQSRjc5wc0O4dXuTa9jo8X5fToYzFkQkX+nkz99I3nzdZv8AlcEuiaPkzRY8mC4/lIzDC7vXjazh20EOuuR19F9bEwsfBx2Y+G3u4m8hpcXcnk8kkqI2lRCC36hSiKKIUQFERAREQYyljnWxtAjkeiw487+yiKWq+H3Vpn+87+FilIOmGGKa90haQL+lae6/5ufg8qNJaCRwt0m143xtIr6lUYQsYX/qOG0ea1uFONdPLnlbQt8DI5HFsvhbX9UHHz0tZRxud0C6Y8ZjiSXFrPjkq1zQbx14KtFoYY2tGw079xPmtb2EEbbK38ODRVX6LNkbC/a4kK0luItP3QHlfQEDb+orF0EIHicAFKLhyNaXfSCfhZOYR1u/ddUTIGvG2SzfSltyow8kx0SOo9ES3zgPjravTqsnMcfI18LDZ8o03smDYHs2g7vVaqDvo6+hUkDQQGu3ADzFLEEtIPIoog4FppwIKlra6ZxcQ6nAi1iQDy0m/cqKxDHlpcGnb61wpVclbWmUROZ5E2tZFda+wQTci2R93Z3bq9iiqORUcGx1VA4UXNosnk9VQViqFbGQ5B9Vth8JFng9VpBoHi1sjfVEgfcLUDo7q3UwX6Us6ZHRNOry9PlBmfo7WsaHetdVyvmd1oV8K2y3vd4iXO4+UE0bWnzvjj0XM+bcG2xlgVwFkZg7aO7YA0VdJY3PnaWt8B+/CxMjyLaaKgljDA3a0m7sBA+j5c+oSxi+STqXOPwVG0eho+QAW0NcWuGwHbyT7I2LxctApBlEHRnxAbvlZSPefEyw4ehU2lxoBpWF7SQQLV8G6IHJsR0JBzRPH2WDiRwCPdad5jNji+lBZd4JOoAeP6qWL8lY8elKX9lCa6cqKze5u1oDRx5rDcL6lY16lBQ8kHZit3uAvg+ZSVsbJKJBAP8AK5BKW9DStul4aC5ytpSGrO0bRfRFCK4d1+UUVpvhERc1ERFRkD4CPNYoiot+IFCVFUFA4+FPZLQFUPNUOr1USkG1nePtsdk+nstjZdnUfwtMTzH4mEgnzCOeXnxdVbR0jIBWe5stCgSVxc+SMdtdYP8ACtjqmiB4afpWh7C1ocfsm41dm1BI4Ai7v1Qb+8jdC0bQJPNx81qe6lhuB+ofwgLTwT/dQZMPiBIFDlRzy5xNDr6KvAYdtg/Cwv8AhBlf2+FnFKWyAjj4Wn4WbBThaBdWXEWfZVV7gXEtoD0KiDShRFzUREQFfZEWoAoFEQFURAtVp8/REVGRO6Q36+Sw6ORERbWdAxPd5goiDWD5rYwXI1p6FEQYPFOI9Cq3iz5hEVEJJPKN5KqKBfkr+1EQYoiIP//Z" alt="Tech-shop Logo" class="h-16" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Tech-Shop</span>
+    </a>
+    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-300" aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg bg-blue-700 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:bg-blue-700">
+        <li>
+          <a href="{% url 'home' %}" class="block py-2 px-3 text-white hover:bg-blue-800 rounded-sm md:bg-transparent md:text-white md:p-0" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="{% url 'about' %}" class="block py-2 px-3 text-white hover:bg-blue-800 rounded-sm md:bg-transparent md:p-0">About</a>
+        </li>
+        <li>
+          <a href="{% url 'contact' %}" class="block py-2 px-3 text-white hover:bg-blue-800 rounded-sm md:bg-transparent md:p-0">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    {% block body %}
+    {% endblock body %}
+{% if messages %}
+  <div class="max-w-xl mx-auto mt-4">
+    {% for message in messages %}
+      <div class="mb-2 px-4 py-3 rounded 
+        {% if message.tags == 'success' %}bg-green-100 text-green-800
+        {% elif message.tags == 'error' %}bg-red-100 text-red-800
+        {% else %}bg-blue-100 text-blue-800{% endif %}">
+        {{ message }}
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+     
+    <footer class="bg-blue-700 text-white py-4 mt-10">
+        <div class="max-w-screen-xl mx-auto text-center">
+            <p>&copy; 2025 Tech-Shop. All rights reserved.</p>
+            <p>Follow us on:
+                <a href="#" class="text-white hover:underline">Facebook</a>,
+                <a href="#" class="text-white hover:underline">Twitter</a>,
+                <a href="#" class="text-white hover:underline">Instagram</a>,
+                <a href="#" class="text-white hover:underline">LinkedIn</a>,
+                <a href="#" class="text-white hover:underline">YouTube</a>,
+                <a href="#" class="text-white hover:underline">TikTok</a>,
+                <a href="#" class="text-white hover:underline">WhatsApp</a>.
+            </p>
+        </div>
+  
+
+
+  
+
+</body>
+</html>
